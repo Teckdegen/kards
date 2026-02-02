@@ -8,8 +8,6 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import FeesSection from '@/components/FeesSection';
 import CardScannerSection from '@/components/CardScannerSection';
 import Footer from '@/components/Footer';
-import AppShowcaseSection from '@/components/AppShowcaseSection';
-import NotificationsSection from '@/components/NotificationsSection';
 
 const Index = () => {
   return (
@@ -24,8 +22,6 @@ const Index = () => {
           <HeroSection />
           <FeaturesSection />
           <CardScannerSection />
-          <AppShowcaseSection />
-          <NotificationsSection />
           <WhereItWorksSection />
           <HowItWorksSection />
           <FeesSection />

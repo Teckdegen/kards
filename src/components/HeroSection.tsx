@@ -1,10 +1,22 @@
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
+import kardsLogoNoBg from '@/assets/kards-logo-nobg.png';
+import appTransactions from '@/assets/app-transactions.png';
+import appInbox from '@/assets/app-inbox.png';
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center section-padding pt-32 pb-20 overflow-hidden">
-      {/* Abstract Atmospheric Background Elements */}
+      {/* Background Decor Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Real-time App Images in Background */}
+        <div className="absolute top-[15%] left-[5%] w-48 md:w-64 opacity-20 rotate-[-12deg] blur-[2px] animate-float">
+          <img src={appTransactions} alt="" className="w-full h-auto rounded-3xl shadow-2xl transition-all duration-1000" />
+        </div>
+
+        <div className="absolute bottom-[20%] right-[5%] w-48 md:w-64 opacity-20 rotate-[12deg] blur-[2px] animate-float" style={{ animationDelay: '-3s' }}>
+          <img src={appInbox} alt="" className="w-full h-auto rounded-3xl shadow-2xl transition-all duration-1000" />
+        </div>
+
         {/* Subtle Node Elements */}
         <div className="absolute top-[30%] left-[15%] flex flex-col items-start opacity-20">
           <div className="flex items-center gap-2 mb-1">
@@ -24,11 +36,18 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
-        {/* Minimalist Heading ONLY */}
+        {/* Minimalist Heading with Logo replacing 'K' */}
         <ScrollReveal delay={100}>
-          <h1 className="text-[20vw] md:text-[15vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
-            KARDS
-          </h1>
+          <div className="flex items-center justify-center">
+            <h1 className="flex items-center text-[20vw] md:text-[15vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+              <img
+                src={kardsLogoNoBg}
+                alt="K"
+                className="h-[18vw] md:h-[13vw] w-auto -mr-[2vw] mt-[1vw] drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] animate-pulse"
+              />
+              ARDS
+            </h1>
+          </div>
         </ScrollReveal>
       </div>
 
