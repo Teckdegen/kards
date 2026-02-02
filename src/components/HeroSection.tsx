@@ -1,19 +1,48 @@
+import { useState, useEffect } from 'react';
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
 import kardsLogoNoBg from '@/assets/kards-logo-nobg.png';
 import appTransactions from '@/assets/app-transactions.png';
 import appInbox from '@/assets/app-inbox.png';
 
 const HeroSection = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const fullText = "ARDS";
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && displayText === fullText) {
+      // Finished typing, wait 4 seconds before starting deletion
+      timeout = setTimeout(() => setIsDeleting(true), 4000);
+    } else if (isDeleting && displayText === '') {
+      // Finished deleting, small pause before typing again
+      timeout = setTimeout(() => setIsDeleting(false), 500);
+    } else {
+      // Typing or deleting
+      const speed = isDeleting ? 100 : 200;
+      timeout = setTimeout(() => {
+        setDisplayText(prev =>
+          isDeleting
+            ? fullText.substring(0, prev.length - 1)
+            : fullText.substring(0, prev.length + 1)
+        );
+      }, speed);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting]);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center section-padding pt-32 pb-20 overflow-hidden">
       {/* Background Decor Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Real-time App Images in Background */}
-        <div className="absolute top-[15%] left-[5%] w-48 md:w-64 opacity-20 rotate-[-12deg] blur-[2px] animate-float">
+        {/* Real-time App Images in Background - Increased Visibility */}
+        <div className="absolute top-[15%] left-[5%] w-48 md:w-64 opacity-50 rotate-[-12deg] blur-[1px] animate-float">
           <img src={appTransactions} alt="" className="w-full h-auto rounded-3xl shadow-2xl transition-all duration-1000" />
         </div>
 
-        <div className="absolute bottom-[20%] right-[5%] w-48 md:w-64 opacity-20 rotate-[12deg] blur-[2px] animate-float" style={{ animationDelay: '-3s' }}>
+        <div className="absolute bottom-[20%] right-[5%] w-48 md:w-64 opacity-50 rotate-[12deg] blur-[1px] animate-float" style={{ animationDelay: '-3s' }}>
           <img src={appInbox} alt="" className="w-full h-auto rounded-3xl shadow-2xl transition-all duration-1000" />
         </div>
 
@@ -36,17 +65,22 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
-        {/* Minimalist Heading with Logo replacing 'K' */}
+        {/* Branding with Logo > Text and Typing Effect */}
         <ScrollReveal delay={100}>
           <div className="flex items-center justify-center">
-            <h1 className="flex items-center text-[20vw] md:text-[15vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+            <div className="flex items-center">
+              {/* Massive Logo */}
               <img
                 src={kardsLogoNoBg}
                 alt="K"
-                className="h-[18vw] md:h-[13vw] w-auto -mr-[2vw] mt-[1vw] drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] animate-pulse"
+                className="h-[25vw] md:h-[18vw] w-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] animate-pulse brightness-110"
               />
-              ARDS
-            </h1>
+              {/* Smaller ARDS with Typing Animation */}
+              <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 ml-[-2vw]">
+                {displayText}
+                <span className="inline-block w-[3px] h-[0.8em] bg-white ml-2 animate-pulse align-middle" />
+              </h1>
+            </div>
           </div>
         </ScrollReveal>
       </div>
