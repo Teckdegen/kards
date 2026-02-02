@@ -1,104 +1,89 @@
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
+import { CreditCard, Shield, Globe, Zap, DollarSign, Users, Smartphone, Landmark } from 'lucide-react';
 
 const features = [
   {
-    id: 'non-kyc',
-    title: 'Non-KYC',
-    description: 'No identity verification. No documents. Complete privacy.',
+    id: 'virtual-card',
+    title: 'Virtual Card',
+    description: 'Instant issue, use anywhere online immediately after setup.',
+    icon: CreditCard
+  },
+  {
+    id: 'physical-cards',
+    title: 'Physical Cards',
+    description: 'Coming in Q3 2026! Pre-order yours soon.',
+    icon: Landmark
+  },
+  {
+    id: 'atm-withdrawals',
+    title: 'ATM Withdrawals',
+    description: 'Withdraw cash anywhere worldwide. Virtual cards, real access.',
+    icon: Smartphone
+  },
+  {
+    id: 'online-payments',
+    title: 'Online Payments',
+    description: 'Works at 50M+ merchants worldwide. Use anywhere Visa is accepted.',
+    icon: Globe
+  },
+  {
+    id: 'complete-privacy',
+    title: 'Complete Privacy',
+    description: 'No identity verification. No documents. No ID. No trace.',
+    icon: Shield
   },
   {
     id: 'monthly-limit',
     title: '$100K Monthly',
     description: 'Industry-leading spending limits for serious users.',
-  },
-  {
-    id: 'transaction-limit',
-    title: '$2.5K Per Transaction',
-    description: 'High single-transaction limits for your needs.',
-  },
-  {
-    id: 'atm',
-    title: 'ATM Support',
-    description: 'Withdraw cash anywhere. Virtual cards, real access.',
-  },
-  {
-    id: 'secure',
-    title: 'Secure Payments',
-    description: 'Top-tier security for all your transactions.',
+    icon: DollarSign
   },
   {
     id: 'stablecoin',
     title: 'Stable-Focused',
-    description: 'Top up with stablecoins. Built for stability.',
-  },
-  {
-    id: 'global',
-    title: 'Global Acceptance',
-    description: 'Works at 50M+ merchants worldwide.',
+    description: 'Top up with USDT or USDC. Built for stability and speed.',
+    icon: Zap
   },
   {
     id: 'referral',
-    title: 'Referral',
-    description: 'You earn 0.5 USD for each card created with your referral code.',
-  },
-  {
-    id: 'instant',
-    title: 'Instant Cards',
-    description: 'Get your card in minutes. Start spending immediately.',
-  },
-  {
-    id: 'virtual-card',
-    title: 'Virtual Card',
-    description: 'Instant issue, use anywhere online. ATM withdrawals, online payments, and complete privacy—all from your phone.',
-  },
-  {
-    id: 'physical-cards',
-    title: 'Physical Cards',
-    description: 'Coming in Q3 2026!',
-  },
+    title: 'Referral Rewards',
+    description: 'Earn 0.5 USD for each card created with your referral code.',
+    icon: Users
+  }
 ];
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative pt-8 md:pt-12 pb-20 md:pb-32 px-4 md:px-8">
+    <section id="features" className="relative pt-20 pb-20 md:pb-32 px-4 md:px-8">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16">
-          <h2 className="comic-text text-4xl md:text-5xl lg:text-6xl text-kards-cream mb-4">
+          <h2 className="comic-text text-4xl md:text-6xl text-kards-cream mb-4">
             POWER FEATURES
           </h2>
-          <p className="text-kards-cream/50 max-w-xl mx-auto text-lg">
+          <p className="text-kards-cream/50 max-w-xl mx-auto text-lg leading-relaxed">
             Everything you need. Nothing you don't.
           </p>
         </ScrollReveal>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-kards-cream/10 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => (
             <ScrollReveal key={feature.id} delay={index * 50}>
-              <div className="group relative bg-background p-8 md:p-10 transition-all duration-300 hover:bg-kards-cream/[0.03]">
-                {/* Subtle hover glow */}
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                  style={{
-                    background: 'radial-gradient(circle at center, hsl(42 33% 92% / 0.03) 0%, transparent 70%)',
-                  }}
-                />
-                
+              <div className="group relative bg-kards-cream/[0.02] border border-kards-cream/10 p-8 rounded-3xl transition-all duration-300 hover:bg-kards-cream/[0.05] hover:border-kards-accent/30 h-full">
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-kards-accent/10 flex items-center justify-center transition-all duration-300 group-hover:bg-kards-accent/20">
+                    <feature.icon className="w-6 h-6 text-kards-accent" />
+                  </div>
+                </div>
+
                 {/* Content */}
                 <div className="relative z-10">
-                  {/* Number indicator */}
-                  <span className="text-kards-cream/20 text-sm font-mono mb-4 block group-hover:text-kards-cream/30 transition-colors duration-300">
-                    0{index + 1}
-                  </span>
-                  
-                  {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-kards-cream mb-2 group-hover:text-kards-cream transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-kards-cream mb-2 group-hover:text-kards-accent transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  
-                  {/* Description */}
-                  <p className="text-kards-cream/50 text-sm md:text-base leading-relaxed group-hover:text-kards-cream/60 transition-colors duration-300">
+                  <p className="text-kards-cream/50 text-sm leading-relaxed group-hover:text-kards-cream/80 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </div>
@@ -109,7 +94,7 @@ const FeaturesSection = () => {
 
         {/* Bottom note */}
         <ScrollReveal delay={400}>
-          <p className="text-center text-kards-cream/30 text-sm mt-8">
+          <p className="text-center text-kards-cream/30 text-sm mt-12">
             Restricted merchants: Airlines, betting & adult sites
           </p>
         </ScrollReveal>
