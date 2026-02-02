@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
-import kardsLogoNoBg from '@/assets/kards-logo-nobg.png';
 import appTransactions from '@/assets/app-transactions.png';
 import appInbox from '@/assets/app-inbox.png';
 
@@ -69,15 +68,9 @@ const HeroSection = () => {
         <ScrollReveal delay={100}>
           <div className="flex items-center justify-center">
             <div className="flex items-center">
-              {/* Massive Logo */}
-              <img
-                src={kardsLogoNoBg}
-                alt="K"
-                className="h-[25vw] md:h-[18vw] w-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] animate-pulse brightness-110"
-              />
-              {/* Smaller ARDS with Typing Animation */}
-              <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 ml-[-2vw]">
-                {displayText}
+              {/* Branding with Typing Animation */}
+              <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+                K{displayText}
                 <span className="inline-block w-[3px] h-[0.8em] bg-white ml-2 animate-pulse align-middle" />
               </h1>
             </div>
