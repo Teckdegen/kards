@@ -45,7 +45,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative pt-24 pb-24 md:pb-32 px-4 md:px-8 bg-black">
+    <section id="features" className="relative pt-24 pb-24 md:pb-32 px-4 md:px-8">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16">
