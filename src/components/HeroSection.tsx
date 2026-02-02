@@ -69,9 +69,9 @@ const HeroSection = () => {
           <div className="flex items-center justify-center">
             <div className="flex items-center">
               {/* Branding with Typing Animation */}
-              <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+              <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 underline decoration-white/30 decoration-[6px] underline-offset-[12px] md:underline-offset-[20px]">
                 K{displayText}
-                <span className="inline-block w-[3px] h-[0.8em] bg-white ml-2 animate-pulse align-middle" />
+                <span className="inline-block w-[3px] h-[0.8em] bg-white ml-2 animate-pulse align-middle no-underline" />
               </h1>
             </div>
           </div>
