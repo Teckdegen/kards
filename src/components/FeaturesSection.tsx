@@ -40,6 +40,11 @@ const features = [
     id: 'referral',
     title: 'Referral Rewards',
     description: 'Earn 0.5 USD for each card created with your referral code.',
+  },
+  {
+    id: 'transaction-limit',
+    title: '$2.5K Limit',
+    description: 'Max $2.5K per single transaction.',
   }
 ];
 

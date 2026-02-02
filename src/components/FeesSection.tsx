@@ -23,11 +23,11 @@ const FeesSection = () => {
               <div className="inline-flex items-center gap-2 bg-kards-accent/20 rounded-full px-4 py-2 mb-6">
                 <span className="text-sm text-kards-accent font-medium">$15 - $200</span>
               </div>
-              
+
               <div className="text-6xl md:text-7xl font-bold text-kards-cream mb-4">
                 $2
               </div>
-              
+
               <p className="text-kards-cream/70 text-lg">
                 Flat fee on top-ups
               </p>
@@ -38,11 +38,11 @@ const FeesSection = () => {
               <div className="inline-flex items-center gap-2 bg-kards-accent/20 rounded-full px-4 py-2 mb-6">
                 <span className="text-sm text-kards-accent font-medium">$200+</span>
               </div>
-              
+
               <div className="text-6xl md:text-7xl font-bold text-kards-cream mb-4">
                 3%
               </div>
-              
+
               <p className="text-kards-cream/70 text-lg">
                 On larger top-ups
               </p>
@@ -57,8 +57,8 @@ const FeesSection = () => {
                 'No monthly fees',
                 'No annual fees',
                 'No inactivity fees',
-                'No foreign transaction fees',
-                'Free virtual card creation',
+                'Variable FX Fees',
+                '$10 Card Creation',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-kards-cream/80">
                   <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -74,7 +74,7 @@ const FeesSection = () => {
           <div className="flex items-start gap-3 glass-card rounded-2xl p-4">
             <Info className="w-5 h-5 text-kards-accent flex-shrink-0 mt-0.5" />
             <p className="text-kards-cream/60 text-sm">
-              $2 flat fee on top-ups from $15 - $200. 3% fee on top-ups over $200. 
+              $2 flat fee on top-ups from $15 - $200. 3% fee on top-ups over $200.
               There are no additional fees when you make purchases or withdraw from ATMs.
             </p>
           </div>

@@ -33,9 +33,7 @@ const WhereItWorksSection = () => {
                   'Restaurants & Cafes',
                   'Gas Stations',
                   'Subscriptions (Netflix, Spotify, etc.)',
-                  'Hotels & Travel',
                   'ATM Withdrawals',
-                  'Apple/Google App Stores',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-kards-cream/80">
                     <Check className="w-5 h-5 text-kards-cream/70 flex-shrink-0" />
@@ -71,7 +69,7 @@ const WhereItWorksSection = () => {
 
               <div className="mt-8 pt-6 border-t border-kards-cream/10">
                 <p className="text-kards-cream/50 text-sm">
-                  These restrictions are in place to comply with card network policies. 
+                  These restrictions are in place to comply with card network policies.
                   All other Visa-accepting merchants worldwide are supported.
                 </p>
               </div>
