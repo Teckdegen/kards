@@ -50,7 +50,7 @@ const FeaturesSection = () => {
         {/* Section Header */}
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tighter uppercase">
-            POWER FEATURES
+            FEATURES
           </h2>
           <div className="w-12 h-px bg-white/20 mx-auto mb-6" />
           <p className="text-white/40 max-w-xl mx-auto text-lg leading-relaxed font-light">
