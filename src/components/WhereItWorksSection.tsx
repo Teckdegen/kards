@@ -1,4 +1,4 @@
-import { Check, X, Globe } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
 
 const WhereItWorksSection = () => {
@@ -78,17 +78,6 @@ const WhereItWorksSection = () => {
             </div>
           </ScrollReveal>
         </div>
-
-        {/* Global coverage stat - smaller */}
-        <ScrollReveal delay={300}>
-          <div className="mt-8 glass-card rounded-2xl p-6 flex items-center justify-center gap-4">
-            <Globe className="w-8 h-8 text-kards-cream/60" />
-            <div>
-              <span className="text-2xl md:text-3xl font-bold text-kards-cream">50M+</span>
-              <span className="text-kards-cream/60 ml-2">merchants worldwide</span>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

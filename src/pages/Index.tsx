@@ -7,7 +7,6 @@ import WhereItWorksSection from '@/components/WhereItWorksSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FeesSection from '@/components/FeesSection';
 import CardScannerSection from '@/components/CardScannerSection';
-import ReferralSection from '@/components/ReferralSection';
 import Footer from '@/components/Footer';
 import AppShowcaseSection from '@/components/AppShowcaseSection';
 import NotificationsSection from '@/components/NotificationsSection';

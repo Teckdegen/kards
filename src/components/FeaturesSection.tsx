@@ -33,18 +33,28 @@ const features = [
   },
   {
     id: 'global',
-    title: '50M+ Merchant Acceptance',
-    description: 'Works at 50 million plus merchants worldwide.',
+    title: 'Global Acceptance',
+    description: 'Works at 50M+ merchants worldwide.',
   },
   {
     id: 'referral',
-    title: 'Referral Rewards',
-    description: 'Earn 0.5 USDC for every card created through your referral. Share Kards and get rewarded.',
+    title: 'Referral',
+    description: 'You earn 0.5 USD for each card created with your referral code.',
   },
   {
     id: 'instant',
     title: 'Instant Cards',
     description: 'Get your card in minutes. Start spending immediately.',
+  },
+  {
+    id: 'virtual-card',
+    title: 'Virtual Card',
+    description: 'Instant issue, use anywhere online. ATM withdrawals, online payments, and complete privacy—all from your phone.',
+  },
+  {
+    id: 'physical-cards',
+    title: 'Physical Cards',
+    description: 'Coming in Q3 2026!',
   },
 ];
 
