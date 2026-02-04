@@ -81,7 +81,7 @@ const HeroSection = () => {
                 to="/chains"
                 className="group relative inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
               >
-                <span className="text-sm font-light tracking-[0.2em] uppercase">Dive In</span>
+                <span className="text-sm font-light tracking-[0.2em] uppercase">Get Started</span>
                 <div className="w-1.5 h-1.5 rounded-full bg-kards-accent shadow-[0_0_10px_#39FF14] group-hover:scale-125 transition-transform" />
               </Link>
             </ScrollReveal>
