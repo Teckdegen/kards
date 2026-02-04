@@ -12,12 +12,12 @@ const Footer = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Brand */}
               <div>
-                <div className="flex items-center mb-4">
+                <Link to="/" className="flex items-center mb-4 group transition-transform hover:scale-105">
                   <span className="font-display font-bold text-2xl text-kards-cream flex items-center">
                     <img src={kardsLogoNoBg} alt="K" className="h-8 w-auto -mr-1" />
                     ARDS
                   </span>
-                </div>
+                </Link>
                 <p className="text-kards-cream/60 text-sm mb-6">
                   Spend Without Being Seen. Privacy-focused crypto debit cards
                   for the modern age.
