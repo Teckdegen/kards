@@ -12,7 +12,7 @@ const Chains = () => {
             name: 'Radix',
             logo: radixLogo,
             description: 'The Full Stack for DeFi.',
-            url: 'https://radix.kards.io', // Placeholder URL
+            url: '#', // Placeholder URL
             available: true
         },
         // Future chains can be added here
