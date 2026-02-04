@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
 import appTransactions from '@/assets/app-transactions.png';
 import appInbox from '@/assets/app-inbox.png';
@@ -66,14 +67,24 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
         {/* Branding with Logo > Text and Typing Effect */}
         <ScrollReveal delay={100}>
-          <div className="flex items-center justify-center">
-            <div className="flex items-center">
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex items-center mb-8">
               {/* Branding with Typing Animation */}
               <h1 className="text-[12vw] md:text-[10vw] font-bold text-white leading-none tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 underline decoration-white/30 decoration-[6px] underline-offset-[12px] md:underline-offset-[20px]">
                 K{displayText}
                 <span className="inline-block w-[3px] h-[0.8em] bg-white ml-2 animate-pulse align-middle no-underline" />
               </h1>
             </div>
+
+            <ScrollReveal delay={800}>
+              <Link
+                to="/chains"
+                className="group relative inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
+              >
+                <span className="text-sm font-light tracking-[0.2em] uppercase">Dive In</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-kards-accent shadow-[0_0_10px_#39FF14] group-hover:scale-125 transition-transform" />
+              </Link>
+            </ScrollReveal>
           </div>
         </ScrollReveal>
       </div>

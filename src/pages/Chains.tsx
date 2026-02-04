@@ -1,19 +1,18 @@
 
-import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import radixLogo from '@/assets/radix-logo.jpg';
 import { ScrollReveal } from '@/hooks/use-scroll-animation';
 import Navbar from '@/components/Navbar';
 
 const Chains = () => {
-    const navigate = useNavigate();
 
     const chains = [
         {
             id: 'radix',
             name: 'Radix',
             logo: radixLogo,
-            description: 'The Smart Money Protocol',
+            description: 'The Full Stack for DeFi.',
+            url: 'https://radix.kards.io', // Placeholder URL
             available: true
         },
         // Future chains can be added here
@@ -50,13 +49,15 @@ const Chains = () => {
                                         <h3 className="text-2xl font-bold text-white mb-2">{chain.name}</h3>
                                         <p className="text-white/40 mb-8">{chain.description}</p>
 
-                                        <button
-                                            onClick={() => navigate(`/chains/${chain.id}`)}
+                                        <a
+                                            href={chain.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="w-full py-4 px-6 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium transition-all flex items-center justify-center gap-2 group-hover:bg-kards-accent group-hover:text-black"
                                         >
                                             Get In
                                             <ArrowRight className="w-4 h-4" />
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </ScrollReveal>
