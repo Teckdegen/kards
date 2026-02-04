@@ -36,9 +36,9 @@ const Chains = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {chains.map((chain) => (
                             <ScrollReveal key={chain.id} delay={100}>
-                                <div className="glass-card p-8 rounded-3xl group hover:bg-white/[0.05] transition-all duration-300">
+                                <div className="glass-card p-8 rounded-3xl group">
                                     <div className="flex flex-col items-center text-center">
-                                        <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-white/5 group-hover:border-kards-accent/50 transition-colors">
+                                        <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-white/5">
                                             <img
                                                 src={chain.logo}
                                                 alt={chain.name}
@@ -53,7 +53,7 @@ const Chains = () => {
                                             href={chain.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-full py-4 px-6 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium transition-all flex items-center justify-center gap-2 group-hover:bg-kards-accent group-hover:text-black"
+                                            className="w-full py-4 px-6 rounded-xl bg-white/5 text-white font-medium flex items-center justify-center gap-2"
                                         >
                                             Get In
                                             <ArrowRight className="w-4 h-4" />
